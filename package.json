@@ -2,9 +2,10 @@
   "name": "func",
   "version": "1.0.0",
   "description": "functional programming doodling using typescript and ramda",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
