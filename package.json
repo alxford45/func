@@ -1,0 +1,19 @@
+{
+  "name": "func",
+  "version": "1.0.0",
+  "description": "functional programming doodling using typescript and ramda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxford45/func.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alxford45/func/issues"
+  },
+  "homepage": "https://github.com/alxford45/func#readme"
+}
