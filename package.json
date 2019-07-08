@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/alxford45/func/issues"
   },
-  "homepage": "https://github.com/alxford45/func#readme"
+  "homepage": "https://github.com/alxford45/func#readme",
+  "devDependencies": {
+    "@types/ramda": "github:types/npm-ramda#dist",
+    "nodemon": "^1.19.1",
+    "ramda": "^0.26.1",
+    "typescript": "^3.5.2"
+  }
 }
