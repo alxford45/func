@@ -45,8 +45,8 @@ console.log("\n");
  * Yfab.fba
  * C := f => a => b => f(b)(a)
  */
-type C<F, X, Y> = (f: F) => (x: X) => (y: Y) => F;
-const C: C<any, any, any> = f => a => b => f(b)(a);
+type C<F, X> = (f: F) => (x: X) => (y: X) => X;
+const C: C<Function, any> = f => a => b => f(b)(a);
 
 //prints "second" by reversing K i.e. Ki
 console.log("Cardinal of the Kestrel of [1, 2] is", C(K)(1)(2));
@@ -73,7 +73,7 @@ console.log("\n");
  * N := p => p(ki)(k)
  */
 type N = (p: any) => any;
-const Not = p => p(Ki)(K);
+const Not: N = p => p(Ki)(K);
 
 //prints Kite (a => b => a) by returning the second argument Y k ki k => k
 console.log("Not of Kestrel is", Not(K));
@@ -88,7 +88,7 @@ console.log("\n");
  * A := p => q => p(q)(p)
  */
 type A = (p: any) => (q: any) => any;
-const AND = p => q => p(q)(p);
+const AND: A = p => q => p(q)(p);
 
 //prints false (Kite) (T => F => F) by Y k ki . k ki k => Y k ki k => ki
 console.log("true (K) AND false (Ki) is", AND(K)(Ki)(true)(false));
@@ -109,7 +109,7 @@ console.log("\n");
  * V := p => q => p(p)(q)
  */
 type V = (p: any) => (q: any) => any;
-const OR = p => q => p(p)(q);
+const OR: V = p => q => p(p)(q);
 
 //prints true (Kestrel) (T => F => T) by Y k ki . k k ki => Y k k ki => k
 console.log("true (K) OR false (Ki) is", OR(K)(Ki)(true)(false));
@@ -129,7 +129,7 @@ console.log("\n");
  * E := p => q => p(q)(~q)
  */
 type E = (p: any) => (q: any) => any;
-const E = p => q => p(q)(Not(q));
+const E: E = p => q => p(q)(Not(q));
 
 //prints false (Kite) (T => F => F) by Y k ki . k ki (ki ki k)  => Y k ki k => ki
 console.log("true (K) EQUALS false (Ki) is", E(K)(Ki)(true)(false));
