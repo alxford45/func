@@ -1,2 +1,3 @@
 # func
-functional programming doodling using typescript and ramda
+
+lambda calculus functions implemented in typescript on Node environment
