@@ -2,7 +2,7 @@
   "name": "func",
   "version": "1.0.0",
   "description": "functional programming doodling using typescript and ramda",
-  "main": "./dist/index.js",
+  "main": "./src/birds.ts",
   "scripts": {
     "start": "nodemon",
     "watch": "tsc -w"
@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/alxford45/func#readme",
   "devDependencies": {
-    "@types/ramda": "github:types/npm-ramda#dist",
     "nodemon": "^1.19.1",
-    "ramda": "^0.26.1",
     "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "ts-node": "^8.3.0"
   }
 }
